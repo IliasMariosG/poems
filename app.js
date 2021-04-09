@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var poemsRouter = require('./routes/poemsList')
 
 var app = express();
 
@@ -22,7 +23,7 @@ app.use(errorhandler());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/poems', poemsRouter);
 // error handler
 app.use(function(err, req, res, next) {
   res.locals.message = err.message
