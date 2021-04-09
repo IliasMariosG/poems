@@ -1,17 +1,13 @@
 var express = require('express');
 var router = express.Router();
+const poem = require('../public/javascripts/poem')
 
 
-const poems = [
-  "All that is gold does not glitter",
-  "Shall be",
-  "It is a sport"
-]
+const allPoems = poem.allPoems
+
 /* GET poems list page. */
 router.get('/', function(req, res, next) {
-  res.render('poems', {
-    message: poems
-  });
+  res.render('poems', { message: allPoems });
 });
 
 module.exports = router;
