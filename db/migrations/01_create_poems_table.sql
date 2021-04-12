@@ -1,0 +1,3 @@
+CREATE TABLE bookmarks(
+id SERIAL PRIMARY KEY, content VARCHAR(60)
+);
