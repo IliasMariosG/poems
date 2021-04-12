@@ -1,10 +1,14 @@
+const client = require('../../db/dbConfig');
+
 class Poem {
-  constructor(allPoems) {
-    this._allPoems = [
-      "All that is gold does not glitter",
-      "Shall be",
-      "It is a sport"
-    ];
+  constructor() {
+    client.connect();
+    client.query(`SELECT * FROM poems;`, (err, res) => {
+      var allPoems = res.rows;
+      client.end()
+      
+      this._allPoems = allPoems
+    })
   }
 
   get allPoems() {
@@ -12,6 +16,6 @@ class Poem {
   }
 }
 poem = new Poem()
-
+// console.log(poem.allPoems)
 module.exports = poem;
 // console.log(poem._allPoems)
