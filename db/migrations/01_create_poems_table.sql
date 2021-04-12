@@ -1,0 +1,3 @@
+CREATE TABLE poems(
+id SERIAL PRIMARY KEY, content VARCHAR(60)
+);
