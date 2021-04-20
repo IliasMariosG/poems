@@ -34,11 +34,12 @@ Test the app
 
 ---
 
-## Endpoints
+## API Documentation
 
-`GET/` - Homepage
-
-`GET/poems` - See a list of poems
+|method| endpoint| description  |
+|------|---------|--------------|
+|`GET` | `/`     | Homepage     |
+|`GET` | `/poems`| List of poems|
 
 ## TODO
 
