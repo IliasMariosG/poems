@@ -33,3 +33,15 @@ Test the app
 `npm test`
 
 ---
+
+## Endpoints
+
+`GET/` - Homepage
+
+`GET/poems` - See a list of poems
+
+## TODO
+
+Add linter
+
+Add nodemon for reloading Express server
