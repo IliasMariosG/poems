@@ -32,6 +32,10 @@ Test the app
 
 `npm test`
 
+Test the app with code coverage (Istanbul)
+
+`npm run test-coverage`
+
 ---
 
 ## API Documentation
@@ -41,7 +45,7 @@ Test the app
 |`GET` | `/`     | Homepage     |
 |`GET` | `/poems`| List of poems|
 
-## TODO
+## TODOs
 
 Add linter
 
