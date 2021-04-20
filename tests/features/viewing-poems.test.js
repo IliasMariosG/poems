@@ -6,5 +6,6 @@ describe('Poems page', () => {
     await expect(page).toMatch("All that is gold does not glitter");
     await expect(page).toMatch("Shall be");
     await expect(page).toMatch("It is a sport")
+    await expect(page).toMatch("The kid went on to play outside")
   });
-})
+});
