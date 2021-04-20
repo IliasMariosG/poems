@@ -22,8 +22,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(errorhandler());
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/poems', poemsRouter);
+
 // error handler
 app.use(function(err, req, res, next) {
   res.locals.message = err.message
