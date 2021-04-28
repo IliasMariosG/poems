@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="/poems/new" method="post">
+      <!-- <%= message %> -->
+      <label for="content"><%=message.content%></label>
+      <textarea id="content" name="content" rows="10"><%= message.content %></textarea>
+      <button type="submit" value="add poem">add poem</button>
+    </form>
+  </body>
+</html>
