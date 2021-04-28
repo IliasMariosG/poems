@@ -44,6 +44,8 @@ Test the app with code coverage (Istanbul)
 |------|---------|--------------|
 |`GET` | `/`     | Homepage     |
 |`GET` | `/poems`| List of poems|
+|`GET` | `/poems/new`| Add a new poem|
+|`POST`|`/poems/new`| See added poems |
 
 ## TODOs
 
