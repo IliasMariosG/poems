@@ -11,9 +11,7 @@ describe('Poems index page', () => {
   it('welcomes the user', async () => {
     await expect(page).toMatchElement('p', { text: 'Welcome to Poems'})
   });
-  it('grabs the poems id element', async () => {
-    await page.goto('http://localhost:3000');
-  
+  it('grabs the \'poems\' id attribute', async () => {
     await expect(page).toMatchElement('#poems', { text: 'Here you\'ll see poems' })
   });
 })
