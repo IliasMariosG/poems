@@ -12,6 +12,12 @@ class Poem {
       fn(allPoems)
     })
   };
+
+  insertPoem(poemContent, fn) {
+    client.query(`INSERT INTO poems(content) VALUES($1) RETURNING content`, [poemContent], (err, res) => {
+      fn()
+    })
+  }
 }
 poem = new Poem()
 

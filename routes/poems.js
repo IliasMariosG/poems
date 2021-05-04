@@ -13,16 +13,17 @@ router.get('/', async function(req, res, next) {
 
 /* GET add poem page. */
 router.get('/new', function(req, res, next) {
-  let content = req.body;
-  res.render('addPoem', { 
-    message: content
-  });
+  res.render('addPoem')
 });
 
 /* Add a new poem. */
-router.post('/new', function(req, res, next) {
+router.post('/', async function(req, res, next) {
+  // "name" field from textarea from addPoem.ejs
   const content = req.body.content
-  res.send(`success: ${content}`)
+  await poem.insertPoem(content, () => {
+    res.send('Success. Poem added');
+  })
+  
 });
 
 module.exports = router;
